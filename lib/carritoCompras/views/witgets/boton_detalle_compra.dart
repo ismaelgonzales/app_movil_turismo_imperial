@@ -1,5 +1,3 @@
-// lib/widgets/custom_floating_action_button.dart
-
 import 'package:flutter/material.dart';
 
 class BotonDetalleCompra extends StatelessWidget {
@@ -20,7 +18,7 @@ class BotonDetalleCompra extends StatelessWidget {
                   ),
                   body: const Center(
                     child: Text(
-                      'Estamos en la siguiente pagina',
+                      'Carrito de compras ',
                       style: TextStyle(fontSize: 24),
                     ),
                   ),

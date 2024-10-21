@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:idl1_des_app/witgets/boton_detalle_compra.dart';
+import 'package:idl1_des_app/carritoCompras/views/witgets/boton_detalle_compra.dart';
 import 'package:idl1_des_app/witgets/title_with_image.dart';
 import 'package:idl1_des_app/witgets/custom_app_bar.dart';
 import 'package:idl1_des_app/witgets/product_card.dart';
