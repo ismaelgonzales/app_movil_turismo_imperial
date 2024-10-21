@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:idl1_des_app/services/service_api.dart'; 
-
-
-import 'package:idl1_des_app/witgets/product_counter.dart'; // Asegúrate de importar el ProductCounter
+import 'package:idl1_des_app/witgets/product_counter.dart'; 
 
 class CardExample extends StatelessWidget {
   final Product product;
@@ -16,7 +13,7 @@ class CardExample extends StatelessWidget {
       child: Card(
         color: const Color.fromARGB(255, 230, 72, 85),
         margin: const EdgeInsets.all(20),
-        clipBehavior: Clip.hardEdge, // Mantiene el InkWell dentro de los bordes
+        clipBehavior: Clip.hardEdge,
         child: InkWell(
           splashColor: const Color.fromARGB(255, 255, 255, 255).withAlpha(30),
           onTap: () {
