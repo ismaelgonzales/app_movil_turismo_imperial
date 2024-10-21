@@ -17,12 +17,12 @@ class TitleWithImage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           const Text(
-            ('Buses'),
+            ('Abarrotes'),
             style:TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color:Colors.white),
           ),
           Image.network(
             'https://res.cloudinary.com/dyelvotz0/image/upload/v1727587318/LogoImperial_nvve7x.png',
-            // width: ,
+            
             height: 90,
           ),
         ],
