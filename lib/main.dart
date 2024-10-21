@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:idl1_des_app/witgets/boton_detalle_compra.dart';
 import 'package:idl1_des_app/witgets/title_with_image.dart';
 import 'package:idl1_des_app/witgets/custom_app_bar.dart';
 import 'package:idl1_des_app/witgets/product_card.dart';
@@ -36,11 +37,7 @@ class MyHomePage extends StatelessWidget {
           CardExample(calidad : Calidades.cargo)
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(255, 230, 72, 85),
-        child:const Icon(Icons.add_alert,color: Color.fromARGB(255, 250, 250, 250),) ,
-        onPressed: () {  },
-        ),
+      floatingActionButton: BotonDetalleCompra(onPressed: () {  },),
     );
   }
 }
