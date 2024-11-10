@@ -26,9 +26,9 @@ class CardExample extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text('${product.name}\nStock${product.stock}', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                  Text('${product.name}\nStock${product.stock}', textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
                   
-                  Text('Precio S/${product.price.toStringAsFixed(2)}', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                  Text('Precio S/${product.price.toStringAsFixed(2)}', style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
                   ProductCounter(), 
                 ],
               ),

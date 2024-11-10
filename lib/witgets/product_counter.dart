@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Product Counter'),
+          title: const Text('Product Counter'),
         ),
         body: Center(
           child: ProductCounter(),
@@ -17,6 +19,8 @@ class MyApp extends StatelessWidget {
 }
 
 class ProductCounter extends StatefulWidget {
+  const ProductCounter({super.key});
+
   @override
   _ProductCounterState createState() => _ProductCounterState();
 }
@@ -41,7 +45,7 @@ class _ProductCounterState extends State<ProductCounter> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(20),
@@ -50,15 +54,15 @@ class _ProductCounterState extends State<ProductCounter> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.remove),
+            icon: const Icon(Icons.remove),
             onPressed: _decrementCounter,
           ),
           Text(
             '$_counter',
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
           IconButton(
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
             onPressed: _incrementCounter,
           ),
         ],

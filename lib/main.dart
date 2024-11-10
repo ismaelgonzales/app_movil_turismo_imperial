@@ -45,18 +45,18 @@ class _MyHomePageState extends State<MyHomePage> {
         future: _products,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return Center(child: Text('No products found'));
+            return const Center(child: Text('No products found'));
           } else {
             final products = snapshot.data!;
             return SingleChildScrollView( 
               child: Column(
                 children: <Widget>[
-                  TitleWithImage(),
-                  ...products.map((product) => CardExample(product: product)).toList(), 
+                  const TitleWithImage(),
+                  ...products.map((product) => CardExample(product: product)), 
                 ],
               ),
             );
