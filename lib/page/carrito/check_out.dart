@@ -1,6 +1,7 @@
 import 'package:idl1_des_app/Provider/add_to_cart_provider.dart';
 import 'package:idl1_des_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:idl1_des_app/page/checkout/order_form_page.dart';
 
 class CheckOutBox extends StatelessWidget {
   const CheckOutBox({super.key});
@@ -97,19 +98,27 @@ class CheckOutBox extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: kprimaryColor,
-                minimumSize: const Size(double.infinity, 55),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: kprimaryColor,
+              minimumSize: const Size(double.infinity, 55),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const OrderFormPage()), // Navegación a OrderFormPage
+              );
+            },
+            child: const Text(
+              "Verificar",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.white,
               ),
-              onPressed: () {},
-              child: const Text(
-                "Verificar",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ))
+            ),
+          )
         ],
       ),
     );
