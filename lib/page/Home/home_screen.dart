@@ -19,31 +19,31 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentSlider = 0;
   int selectedIndex = 0;
   
-  // Lista para almacenar los productos (se actualizará después de obtenerlos de la API)
+
   List<List<Product>> selectcategories = [all];
 
   @override
   void initState() {
     super.initState();
-    // Llamamos al método para obtener productos de la API
+
     fetchAndReplaceProducts();
   }
 
   Future<void> fetchAndReplaceProducts() async {
     try {
-      // Llamamos a la API y obtenemos los productos
+
       List<ProductApi> apiProducts = await ApiService().fetchProducts();
 
-      // Convertimos los productos de la API a productos locales
+
       List<Product> updatedProducts = apiProducts.map((apiProduct) => apiProduct.toProduct()).toList();
 
-      // Actualizamos el estado con los nuevos productos
+
       setState(() {
         selectcategories[0] = updatedProducts;
       });
     } catch (error) {
       print("Error al cargar productos desde la API: $error");
-      // Si hay un error, puedes dejar los productos mock o manejarlo de otra manera
+
     }
   }
 
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               const SizedBox(height: 20),
-              // Cuerpo para mostrar productos
+ 
               if (selectedIndex == 0)
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

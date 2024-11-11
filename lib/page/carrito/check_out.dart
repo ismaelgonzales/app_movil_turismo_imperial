@@ -107,7 +107,7 @@ class CheckOutBox extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        const OrderFormPage()), // Navegación a OrderFormPage
+                        const OrderFormPage()), 
               );
             },
             child: const Text(

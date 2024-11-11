@@ -31,7 +31,7 @@ class ItemsDetails extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
-                // for rating
+    
                 Row(
                   children: [
                     Container(

@@ -28,15 +28,15 @@ class OrderFormPageState extends State<OrderFormPage> {
   Future<void> _submitOrder() async {
     if (_formKey.currentState?.validate() != true) return;
     if (_currentPosition == null || _image == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Por favor, complete todos los campos')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text('Por favor, complete todos los campos')));
       return;
     }
 
     final cartProvider = Provider.of<CartProvider>(context, listen: false);
     final products = cartProvider.cart;
 
-    // Llamada a OrderService y manejo de la respuesta completa
+ 
     final response = await OrderService.submitOrder(
       paymentMethod: _paymentMethod!,
       userName: _nameController.text,
@@ -48,6 +48,7 @@ class OrderFormPageState extends State<OrderFormPage> {
       products: products,
     );
 
+  
     if (response != null && response.statusCode == 200) {
       final responseData = jsonDecode(response.body);
       Navigator.push(
@@ -79,7 +80,7 @@ class OrderFormPageState extends State<OrderFormPage> {
     if (pickedFile != null) {
       final file = File(pickedFile.path);
       if (await file.length() <= 1024 * 1024) {
-        // Max 1MB
+       
         setState(() {
           _image = file;
         });
@@ -111,7 +112,8 @@ class OrderFormPageState extends State<OrderFormPage> {
             children: [
               DropdownButtonFormField<String>(
                 value: _paymentMethod,
-                items: ["cash", "credit-card", "debit-card"].map((String method) {
+                items:
+                    ["cash", "credit-card", "debit-card"].map((String method) {
                   return DropdownMenuItem(value: method, child: Text(method));
                 }).toList(),
                 onChanged: (value) => setState(() => _paymentMethod = value),
@@ -153,13 +155,16 @@ class OrderFormPageState extends State<OrderFormPage> {
                 ),
               const Spacer(),
               ElevatedButton(
-                onPressed: _submitOrder,
-                child: const Text("Comprar"),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  backgroundColor: Colors.green,
-                ),
-              ),
+  onPressed: _submitOrder,
+  child: const Text("Comprar"),
+  style: ElevatedButton.styleFrom(
+    padding: const EdgeInsets.symmetric(vertical: 16.0),
+    backgroundColor: Colors.red,
+    foregroundColor: Colors.white,
+    minimumSize: const Size(double.infinity, 50),
+  ),
+),
+
             ],
           ),
         ),

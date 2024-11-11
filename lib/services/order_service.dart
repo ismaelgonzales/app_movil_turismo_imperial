@@ -1,3 +1,4 @@
+
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
@@ -19,11 +20,11 @@ class OrderService {
     try {
       String base64Image = base64Encode(await userPhoto.readAsBytes());
 
-      // Convertir productos a la estructura esperada
+
       final productData = products.map((product) => {
         "id": product.id,
         "quantity": product.quantity,
-        "amount": product.price.toInt(),  // Convertimos el precio a entero
+        "amount": product.price.toInt(),
       }).toList();
 
       final orderData = {

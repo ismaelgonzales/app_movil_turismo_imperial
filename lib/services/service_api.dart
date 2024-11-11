@@ -55,7 +55,7 @@ class ProductApi {
       id : this.id,
       title: this.name,
       description: this.description,
-      //
+   
       price: this.price,
       seller: "Jose Alberto ",  
       colors: [Colors.black, Colors.green,Colors.red],

@@ -35,7 +35,7 @@ class ProductCard extends StatelessWidget {
                 const SizedBox(height: 5),
                 Center(
                   child: Image.asset(
-                    "images/logo.png",  // La ruta de la imagen del producto
+                    "images/logo.png",
                     width: 150,
                     height: 150,
                     fit: BoxFit.cover,

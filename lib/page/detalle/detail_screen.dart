@@ -22,7 +22,7 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kcontentColor,
-      // for add to cart , icon and quantity
+  
       floatingActionButton: AddToCart(product: widget.product),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
@@ -30,9 +30,9 @@ class _DetailScreenState extends State<DetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // for back button share and favorite,
+    
             DetailAppBar(product: widget.product,),
-            // for detail image slider
+    
             MyImageSlider(
               image: "images/logo.png",
               onChange: (index) {
@@ -82,7 +82,7 @@ class _DetailScreenState extends State<DetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // for product name, price, rating, and seller
+             
                   ItemsDetails(product: widget.product),
                   const SizedBox(height: 20),
                   const Text(
@@ -130,7 +130,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                   ),
                    const SizedBox(height: 25),
-                   // for description
+          
                    Description(description: widget.product.description,)
                 ],
               ),

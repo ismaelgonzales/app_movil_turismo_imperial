@@ -88,7 +88,7 @@ class _FavoriteState extends State<Favorite> {
                             ),
                           ),
                         ),
-                        // for delete button
+      
                         Positioned(
                           top: 50,right: 35,
                           child: GestureDetector(

@@ -10,7 +10,7 @@ class Profile extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            "images/profile3.png",
+            "images/logo.png",
             fit: BoxFit.cover,
             height: size.height,
             width: size.width,
@@ -42,7 +42,7 @@ class Profile extends StatelessWidget {
                                     const CircleAvatar(
                                       radius: 42,
                                       backgroundImage:
-                                          AssetImage("images/profile3.png"),
+                                          AssetImage("images/logo.png"),
                                     ),
                                     Positioned(
                                       bottom: 0,
@@ -64,47 +64,12 @@ class Profile extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          border: Border.all(
-                                              color: Colors.black54)),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 9, horizontal: 12),
-                                      child: const Text(
-                                        "ADD FRIEND",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        color: Colors.pink,
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 8, horizontal: 12),
-                                      child: const Text(
-                                        "Follow",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                )
+                                
                               ],
                             ),
                             const SizedBox(height: 10),
                             const Text(
-                              "Winnie Vasquez",
+                              "Ismael gonzales",
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 35,
@@ -121,7 +86,7 @@ class Profile extends StatelessWidget {
                               height: 15,
                             ),
                             const Text(
-                              "A Flutter developer is a software engineer who has proficiency with the Flutter framework to develop mobile, web,",
+                              "RAAAAAAAA",
                               style: TextStyle(
                                 fontSize: 16,
                               ),
@@ -133,17 +98,7 @@ class Profile extends StatelessWidget {
                       const Divider(
                         color: Colors.black12,
                       ),
-                      SizedBox(
-                        height: 65,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            friendAndMore("FRIENDS", "2318"),
-                            friendAndMore("FOLLOWING", "364"),
-                            friendAndMore("FOLLOWER", "175"),
-                          ],
-                        ),
-                      ),
+                      
                     ],
                   ),
                 ),

@@ -50,7 +50,7 @@ class OrderConfirmationPage extends StatelessWidget {
             Spacer(),
             ElevatedButton(
               onPressed: () {
-                Navigator.pop(context); // Regresa a la pantalla anterior o principal
+                Navigator.pop(context); 
               },
               child: Text("Volver al Inicio"),
               style: ElevatedButton.styleFrom(

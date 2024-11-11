@@ -90,7 +90,7 @@ class _CartScreenState extends State<CartScreen> {
                                 borderRadius: BorderRadius.circular(20),
                                 color: kcontentColor,
                               ),
-                              // padding: const EdgeInsets.all(20),
+                              
                               child: Image.asset("images/logo.png"),
                             ),
                             const SizedBox(width: 10),
@@ -133,10 +133,10 @@ class _CartScreenState extends State<CartScreen> {
                       right: 35,
                       child: Column(
                         children: [
-                          // for remove items
+                       
                           IconButton(
                             onPressed: () {
-                              // for remove ites for cart
+                            
                               finalList.removeAt(index);
                               setState(() {});
                             },
@@ -146,7 +146,7 @@ class _CartScreenState extends State<CartScreen> {
                               size: 20,
                             ),
                           ),
-                          // for items quantity
+                    
                           const SizedBox(height: 10),
                           Container(
                             height: 40,
