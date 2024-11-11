@@ -91,7 +91,7 @@ class _CartScreenState extends State<CartScreen> {
                                 color: kcontentColor,
                               ),
                               // padding: const EdgeInsets.all(20),
-                              child: Image.asset("images/jewelry/necklace-jewellery.png"),
+                              child: Image.asset("images/logo.png"),
                             ),
                             const SizedBox(width: 10),
                             Column(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:idl1_des_app/services/service_api.dart';
 
 class Product {
+  final String id;
   final String title;
   final String description;
 
@@ -14,7 +15,8 @@ class Product {
   int quantity;
 
   Product(
-      {required this.title,
+      {required this.id,
+        required this.title,
       required this.review,
       required this.description,
       

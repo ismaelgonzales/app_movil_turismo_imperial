@@ -52,6 +52,7 @@ class ProductApi {
  
   Product toProduct() {
     return Product(
+      id : this.id,
       title: this.name,
       description: this.description,
       //

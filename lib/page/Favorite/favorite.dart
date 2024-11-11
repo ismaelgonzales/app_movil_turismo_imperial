@@ -52,7 +52,7 @@ class _FavoriteState extends State<Favorite> {
                                     color: kcontentColor,
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  child: Image.asset("images/jewelry/necklace-jewellery.png"),
+                                  child: Image.asset("images/logo.png"),
                                 ),
                                 const SizedBox(width: 10),
                                 Column(
